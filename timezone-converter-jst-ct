@@ -1,0 +1,21 @@
+print('\n Hello! Please enter your current time (24h format) and I will convert it to Home Time. :) \n')
+hour = 'Hour (00~24): \n'
+minute = 'Minute (00~59): \n'
+JST_time = int(input(hour))
+JST_min = (input(minute))
+
+if JST_time >= 14:
+    home_time = int(JST_time) - 14
+if JST_time < 14:
+    home_time = int(JST_time) + 10
+
+print('it is, '+str(home_time)+':'+JST_min+' at home right now. <3')
+
+def tip(home_time):
+    if int(home_time) <= 6:
+        print('\n Everyone may be sleeping right now...')
+    elif int(home_time) >= 23:
+        print('\n Everyone may be sleeping right now...')
+    else:
+        print('\n It is a good time to talk to family & friends. ^^')
+tip(home_time)
